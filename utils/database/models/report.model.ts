@@ -8,7 +8,7 @@ const reportSchema = new Schema({
   },
   issueType: {
     type: String,
-    enum: ['infrastructure', 'education', 'unemployment', 'security', 'governance', 'transportation', 'social issues', 'economic issues'],
+    enum: ['infrastructure', 'education', 'unemployment', 'security', 'governance', 'transportation', 'social-issues', 'economic-issues'],
     required: true,
   },
   reportedComplain: {

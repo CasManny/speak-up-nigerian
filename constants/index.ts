@@ -1,6 +1,5 @@
-import { title } from "process";
 
-export const nigeriaStates = [
+export const nigeriaStates = [ "Search complains by state",
     "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa",
     "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", 
     "Ekiti", "Enugu", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", 
@@ -71,12 +70,8 @@ export const navigationLinks = [
     },
    
     {
-        label: "News",
-        href: "/news"
-    },
-    {
-        label: "Report Issue",
-        href: "/report-issue"
+        label: "Complains",
+        href: "/complains"
     },
     {
         label: "Dashboard",
@@ -107,7 +102,6 @@ export const missions = [
     "Strengthen community bonds and solidarity.",
     "Build trust between citizens and government agencies."
 ]
-
 export const howItWorks = [
     {
         step: "Step 1",
@@ -129,49 +123,49 @@ export const howItWorks = [
 export const reportIssuesOn = [
     {
         title: "Infrastructure",
-        href: "/report-issue/infrastructure-issues",
+        href: "/report-issues/infrastructure",
         picture: "/infrastructure-bridge.jpg",
         text: "Report issues related to public infrastructure such as roads, bridges, water supply, electricity, and public transportation."
     },
     {
         title: "Education",
-        href: "/report-issue/education-issues",
+        href: "/report-issues/education",
         picture: "/education-books.jpg",
         text: "Notify about concerns regarding school facilities, teaching materials, teacher shortages, and access to education"
     },
     {
         title: "Unemployment",
-        href: "/report-issue/unemployment-issues",
+        href: "/report-issues/unemployment",
         picture: "/employment.jpg",
         text: "Highlight challenges such as job shortages, inequitable hiring practices, and barriers to entrepreneurship."
     },
     {
         title: "Security",
-        href: "/report-issue/security-issues",
+        href: "/report-issues/security",
         picture: "/security-camera.jpg",
         text: "Raise awareness on matters like crime rates, vandalism, public safety risks, and law enforcement issues"
     },
     {
         title: "Governance",
-        href: "/report-issue/governance-issues",
+        href: "/report-issues/governance",
         picture: "/governance-rule-of-law.jpg",
         text: "Report problems including corruption, transparency deficits, bureaucratic inefficiencies, and local governance shortcomings"
     },
     {
         title: "Transportation",
-        href:"/report-issue/transportation-issues",
+        href:"/report-issues/transportation",
         picture: "/transportation-cars.jpg",
         text: "Identify problems such as traffic congestion, delays in public transit, pedestrian safety hazards, and accessibility issues in transport."
     },
     {
         title: "Social Issues",
-        href: "/report-issue/social-issues",
+        href: "/report-issues/social-issues",
         picture: "/social-issues-inequalities.jpg",
         text: "Bring attention to issues such as homelessness, substance abuse, domestic violence, discrimination, and access to social services"
     },
     {
         title: "Economic Issues",
-        href: "/report-issue/economic-issues",
+        href: "/report-issues/economic-issues",
         picture: "/people-holding-banner-seeking-support.jpg",
         text: "Flag concerns such as poverty levels, economic disparities, job availability, cost of living challenges, and financial access issues"
     }
@@ -230,7 +224,7 @@ export const FAQs = [
     }
 ]
 
-export const sidebar = [
+export const createUser = [
     {
         label: "Sign in",
         href: "/sign-in"
@@ -239,6 +233,112 @@ export const sidebar = [
         label: "Create account",
         href: "/sign-up"
     }
+]
+
+export const complainSidebar = [
+    {
+        label: "Infrastructure",
+        picture: "/bridge.png",
+        href: "/report-issues/infrastructure"
+    },
+    {
+        label: "Economic Issues",
+        picture: "/job-loss.png",
+        href:"/report-issues/economic-issues"
+    },
+    {
+        label: "Transportation",
+        picture: "/car-accident.png",
+        href: "/report-issues/transportation"
+    },
+    {
+        label: "Governance",
+        picture: "/court.png",
+        href: "/report-issues/governance"
+    },
+    {
+        label: "Security",
+        picture: "/gun.png",
+        href: "/report-issues/security"
+    },
+    {
+        label: "Employment",
+        picture: "/poverty.png",
+        href:"/report-issues/employment"
+    },
+    {
+        label: "Social Issues",
+        picture: "/inequality.png",
+        href: "/report-issues/social-issues"
+    },
+    {
+        label: "Education",
+        picture: "/graduate.png",
+        href: '/report-issues/education'
+    }
+]
+
+export const dummyData = [
+    {
+        profileImage: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "Chukwu sabastine",
+        dateOfPosting: "02/04/2024",
+        issue: "Employment",
+        reportImage: "/people-holding-banner-seeking-support.jpg",
+        reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
+        reportNumberOfComment: 6,
+        reportUpvote: 4,
+    },
+    {
+        profileImage: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "Chukwu sabastine",
+        dateOfPosting: "02/04/202",
+        issue: "Employment",
+        reportImage: "/people-holding-banner-seeking-support.jpg",
+        reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
+        reportNumberOfComment: 6,
+        reportUpvote: 4,
+    },
+    {
+        profileImage: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "Chukwu sabastine",
+        dateOfPosting: "02/04/2024",
+        issue: "Employment",
+        reportImage: "/people-holding-banner-seeking-support.jpg",
+        reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
+        reportNumberOfComment: 6,
+        reportUpvote: 4,
+    },
+    {
+        profileImage: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "Chukwu sabastine",
+        dateOfPosting: "02/04/2024",
+        issue: "Employment",
+        reportImage: "/people-holding-banner-seeking-support.jpg",
+        reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
+        reportNumberOfComment: 6,
+        reportUpvote: 4,
+    },
+    {
+        profileImage: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "Chukwu sabastine",
+        dateOfPosting: "02/04/2024",
+        issue: "Employment",
+        reportImage: "/people-holding-banner-seeking-support.jpg",
+        reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
+        reportNumberOfComment: 6,
+        reportUpvote: 4,
+    },
+    {
+        profileImage: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "Chukwu sabastine",
+        dateOfPosting: "02/04/2024",
+        issue: "Employment",
+        reportImage: "/people-holding-banner-seeking-support.jpg",
+        reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
+        reportNumberOfComment: 6,
+        reportUpvote: 4,
+    },
 ]
 
   

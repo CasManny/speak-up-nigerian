@@ -22,7 +22,7 @@ const config = {
         "white-1": "#EBF5EE",
         "white-2": "#EAFFFD",
         "white-3": "#FFF8F0",
-        "white-4": "#6FD08C",
+        "white-4": "#FAF8FF",
         "white-5": "#F6FFF8",
         "green-1":"#85D831",
         "green-2": "#67D08C",
