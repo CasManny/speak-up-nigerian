@@ -1,19 +1,10 @@
+"use client";
 import { IReportedIssue } from "@/types";
-import { MessageCircle, Triangle } from "lucide-react";
+import { MessageCircle, Triangle, X } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+import { dummyComment } from "@/constants";
 
 const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
   return (
@@ -35,19 +26,62 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
         <p className="text-xl">{item.reportDesc}</p>
 
         <div className="card-actions justify-between items-center">
-          <div className="comment flex items-center justify-center cursor-pointer">
-            <MessageCircle />
-            <span>{item.reportNumberOfComment}</span>
+          <div className="comment">
+            <button
+              className="btn"
+              onClick={() => {
+                if (document) {
+                  (
+                    document.getElementById("my_modal_3") as HTMLFormElement
+                  ).showModal();
+                }
+              }}
+            >
+              <MessageCircle />
+              <span>{item.reportNumberOfComment}</span>
+            </button>
           </div>
           <div className="upvote">
-            <Button>
+            <button className="btn">
               <Triangle />
               <span className="text-white">{item.reportUpvote}</span>
-            </Button>
+            </button>
           </div>
         </div>
       </div>
-   
+
+      {/* You can open the modal using document.getElementById('ID').showModal() method */}
+      <dialog id="my_modal_3" className="modal">
+        <div className="modal-box">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              <X className="text-white" />
+            </button>
+          </form>
+          <h3 className="font-bold text-lg text-white">
+            Comment On this Report
+          </h3>
+          <div className="comment-container">
+            {dummyComment.map((comment, index) => (
+              <div className="flex gap-2 my-3" key={index}>
+                <div className="avatar">
+                  <div className="w-8 h-8 rounded-full">
+                    <img src={comment.userPicture} alt="profile picuture" />
+                  </div>
+                </div>
+                <div className="">
+                  <span className="text-white-5">{comment.fullName}</span>
+                  <p>{comment.comment}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <form action="">
+            
+          </form>
+        </div>
+      </dialog>
     </div>
   );
 };

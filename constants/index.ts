@@ -341,6 +341,24 @@ export const dummyData = [
     },
 ]
 
+export const dummyComment = [
+    {
+        userPicture: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "casmanny",
+        comment: "This problem is really ravaging our community, we seriously needs the government intervention."
+    },
+    {
+        userPicture: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "casmanny",
+        comment: "This problem is really ravaging our community, we seriously needs the government intervention."
+    },
+    {
+        userPicture: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
+        fullName: "casmanny",
+        comment: "This problem is really ravaging our community, we seriously needs the government intervention."
+    },
+]
+
   
   
   

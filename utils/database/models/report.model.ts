@@ -35,7 +35,7 @@ const reportSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User"
   }],
-  comments: [{
+  commentsOnReports: [{
     commentorId: {
       type: Schema.Types.ObjectId,
       ref: 'User',
