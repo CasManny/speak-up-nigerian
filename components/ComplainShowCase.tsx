@@ -4,6 +4,7 @@ import SearchComplain from "./SearchComplain";
 import ComplainMenu from "./ComlainMenu";
 import ReportedIssues from "./ReportedIssues";
 import { dummyData } from "@/constants";
+import ComplainSkeleton from "./ComplainSkeleton";
 
 const ComplainShowCase = () => {
   return (

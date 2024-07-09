@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Mission from "@/components/Mission";
-import ReportIssues from "@/components/ReportIssues";
+import ReportIssuesHomepage from "@/components/ReportIssuesHomepage";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <div className="container">
         <Hero />
-        <ReportIssues />
+        <ReportIssuesHomepage />
         <Mission />
         <FAQ />
       </div>

@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-const ReportIssues = () => {
+const ReportIssuesHomepage = () => {
   return (
     <div className="max-w-6xl">
       <h1 className="text-3xl text-center my-5">
@@ -32,4 +32,4 @@ const ReportIssues = () => {
   );
 };
 
-export default ReportIssues;
+export default ReportIssuesHomepage;

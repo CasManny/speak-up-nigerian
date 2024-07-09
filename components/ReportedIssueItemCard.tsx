@@ -5,6 +5,9 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { dummyComment } from "@/constants";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import Loading from "./Loading";
 
 const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
   return (
@@ -28,7 +31,7 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
         <div className="card-actions justify-between items-center">
           <div className="comment">
             <button
-              className="btn"
+              className="btn text-white"
               onClick={() => {
                 if (document) {
                   (
@@ -42,9 +45,10 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
             </button>
           </div>
           <div className="upvote">
-            <button className="btn">
+            <button className="btn text-white">
               <Triangle />
               <span className="text-white">{item.reportUpvote}</span>
+              <Loading />
             </button>
           </div>
         </div>
@@ -62,6 +66,8 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
           <h3 className="font-bold text-lg text-white">
             Comment On this Report
           </h3>
+          <div className="divider divider-accent divider-end" />
+
           <div className="comment-container">
             {dummyComment.map((comment, index) => (
               <div className="flex gap-2 my-3" key={index}>
@@ -77,8 +83,15 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
               </div>
             ))}
           </div>
-          <form action="">
-            
+          <form action="" className="flex gap-2 flex-col items-center mt-2">
+            <Textarea
+              className="resize-none text-black-4"
+              placeholder="Your thoughts on this report"
+            />
+            <Button className="bg-green-2 hover:bg-green-2 hover:text-black-4 w-full">
+              <Loading />
+              Comment
+            </Button>
           </form>
         </div>
       </dialog>

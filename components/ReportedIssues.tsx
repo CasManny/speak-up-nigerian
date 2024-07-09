@@ -1,5 +1,5 @@
 import React from 'react'
-import ReportedIssue from './ReportedIssue'
+import ReportedIssue from './ReportedIssueItemCard'
 import { IReportedIssue } from '@/types'
 
 
