@@ -22,7 +22,7 @@ const menu = [
   },
   {
     label: "Dashboard",
-    href: "/dasboard",
+    href: "/dashboard",
   },
 ];
 const ComplainMenu = () => {

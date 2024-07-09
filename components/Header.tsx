@@ -19,9 +19,8 @@ import {
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const path = usePathname()
-    // TODO: ON SCROLL LET THE NAVIGATION TURN GREEN AND TEXT GREEN
   return (
-    <div className=' w-full p-8 sticky top-0 left-0 bg-green-200 z-50'>
+    <div className=' w-full p-8 sticky top-0 left-0 bg-background z-50'>
         <nav className="flex justify-between items-center">
             <Link href={'/'} className='text-2xl'> <span className='text-green-3'>Speak</span> up 🇳🇬</Link>
             <ul className=' gap-4 justify-between hidden md:flex '>

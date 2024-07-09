@@ -12,7 +12,7 @@ const ReportIssuesHomepage = () => {
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
         {reportIssuesOn.map((issue, index) => (
           <div
-            className="card card-compact bg-base-100 w-80 h-80 shadow-xl mx-auto"
+            className="card card-compact w-80 h-80 shadow-xl mx-auto bg-white-5"
             key={index}
           >
             <figure>

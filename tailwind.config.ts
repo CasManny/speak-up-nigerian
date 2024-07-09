@@ -21,16 +21,17 @@ const config = {
       colors: {
         "white-1": "#EBF5EE",
         "white-2": "#EAFFFD",
-        "white-3": "#FFF8F0",
+        "white-3": "#FAFAFB",
         "white-4": "#FAF8FF",
         "white-5": "#F6FFF8",
         "green-1":"#85D831",
         "green-2": "#67D08C",
         "green-3": "#0CCE6B",
-        "black-1": "#1F322B",
+        "black-1": "#2B3235",
         "black-2": "#394053",
         "black-3": "#070D0C",
-        "black-4": "#1F322B"
+        "black-4": "#1F322B",
+        "background": "#FBFBFB"
       },
       screens: {
         xs: "400px"

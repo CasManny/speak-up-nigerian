@@ -21,7 +21,7 @@ const Mission = () => {
             <h1 className='text-3xl font-bold mb-10 text-center'>How it <span className='text-green-1'>works</span> </h1>
             <div className="how-it-work grid sm:grid-cols-2 xs:grid-cols-1 gap-2 md:grid-cols-3 text-white-5">
                 {howItWorks.map((process) => (
-                    <div className='shadow-lg p-10 rounded-lg bg-green-1 flex flex-col'>
+                    <div className='shadow-lg p-10 rounded-lg bg-green-2 flex flex-col'>
                         <div className="w-full max-h-[150px]">
                         <Image src={process.picture} width={150} height={150} alt={process.picture} className='w-full h-full' />
 

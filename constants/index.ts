@@ -292,6 +292,7 @@ export const dummyData = [
         fullName: "Chukwu sabastine",
         dateOfPosting: "02/04/2024",
         issue: "Employment",
+        state: "Enugu",
         reportImage: "/people-holding-banner-seeking-support.jpg",
         reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
         reportNumberOfComment: 6,
@@ -302,6 +303,8 @@ export const dummyData = [
         fullName: "Chukwu sabastine",
         dateOfPosting: "02/04/202",
         issue: "Employment",
+        state: "Enugu",
+
         reportImage: "/people-holding-banner-seeking-support.jpg",
         reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
         reportNumberOfComment: 6,
@@ -312,6 +315,8 @@ export const dummyData = [
         fullName: "Chukwu sabastine",
         dateOfPosting: "02/04/2024",
         issue: "Employment",
+        state: "Enugu",
+
         reportImage: "/people-holding-banner-seeking-support.jpg",
         reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
         reportNumberOfComment: 6,
@@ -322,6 +327,8 @@ export const dummyData = [
         fullName: "Chukwu sabastine",
         dateOfPosting: "02/04/2024",
         issue: "Employment",
+        state: "Enugu",
+
         reportImage: "/people-holding-banner-seeking-support.jpg",
         reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
         reportNumberOfComment: 6,
@@ -332,6 +339,8 @@ export const dummyData = [
         fullName: "Chukwu sabastine",
         dateOfPosting: "02/04/2024",
         issue: "Employment",
+        state: "Enugu",
+
         reportImage: "/people-holding-banner-seeking-support.jpg",
         reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
         reportNumberOfComment: 6,
@@ -342,6 +351,8 @@ export const dummyData = [
         fullName: "Chukwu sabastine",
         dateOfPosting: "02/04/2024",
         issue: "Employment",
+        state: "Enugu",
+
         reportImage: "/people-holding-banner-seeking-support.jpg",
         reportDesc: "A user dashboard should provide a comprehensive and user-friendly interface that allows users to manage their reports, track the status of their issues, receive notifications, and interact with the platform. Here's a conceptual layout and key components for the dashboard:",
         reportNumberOfComment: 6,
@@ -364,6 +375,59 @@ export const dummyComment = [
         userPicture: "https://avatar.iran.liara.run/public/boy?username=kinglsey",
         fullName: "casmanny",
         comment: "This problem is really ravaging our community, we seriously needs the government intervention."
+    },
+]
+
+export const dummyDashboardData = [
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
+    },
+    {
+        report: "I am reporting an issue of unfair dismissal and lack of benefits at XYZ Manufacturing Company, located in the Ikeja Industrial Area of Lagos. Several employees, including myself, have been dismissed without proper notice or severance pay, which is against the labor laws in Nigeria.",
+        reportStatus: "submited",
+        dateReportWasMade: "2/07/2024",
     },
 ]
 

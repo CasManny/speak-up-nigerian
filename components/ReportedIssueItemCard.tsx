@@ -5,7 +5,6 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { dummyComment } from "@/constants";
-import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import Loading from "./Loading";
 
@@ -19,14 +18,15 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
           </div>
         </div>
         <div className="header-name">
-          <h2>{item.fullName}</h2>
-          <p>{item.dateOfPosting}</p>
+          <h2 className="font-bold">{item.fullName}</h2>
+          <span className="badge badge-outline">{item.state}</span>
+          <small className="text-base ml-2">{item.dateOfPosting}</small>
         </div>
       </div>
 
       <div className="card-body">
         <div className="badge badge-outline">{item.issue}</div>
-        <p className="text-xl">{item.reportDesc}</p>
+        <p className="text-normal text-black-1">{item.reportDesc}</p>
 
         <div className="card-actions justify-between items-center">
           <div className="comment">
