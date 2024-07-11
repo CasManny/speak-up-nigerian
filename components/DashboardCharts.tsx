@@ -2,7 +2,12 @@
 
 import { Bar, BarChart, XAxis } from "recharts";
 
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
 
 const chartData = [
   { report: "Employment", rate: 186 },
@@ -24,19 +29,21 @@ const chartConfig = {
 
 const DashboardCharts = () => {
   return (
-    <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-      <BarChart accessibilityLayer data={chartData}>
-        <XAxis
-          dataKey="report"
-          tickLine={false}
-          tickMargin={10}
-          axisLine={false}
-          tickFormatter={(value) => value.slice(0, 3)}
-        />
-        <ChartTooltip content={<ChartTooltipContent />} />
-        <Bar dataKey="rate" fill="#0CCE6B" radius={4} />
-      </BarChart>
-    </ChartContainer>
+    <>
+      <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+        <BarChart accessibilityLayer data={chartData}>
+          <XAxis
+            dataKey="report"
+            tickLine={false}
+            tickMargin={10}
+            axisLine={false}
+            tickFormatter={(value) => value.slice(0, 3)}
+          />
+          <ChartTooltip content={<ChartTooltipContent />} />
+          <Bar dataKey="rate" fill="#0CCE6B" radius={4} />
+        </BarChart>
+      </ChartContainer>
+    </>
   );
 };
 

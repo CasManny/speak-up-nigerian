@@ -1,7 +1,6 @@
 "use client";
 import { IReportedIssue } from "@/types";
 import { MessageCircle, Triangle, X } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { dummyComment } from "@/constants";
@@ -31,7 +30,7 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
         <div className="card-actions justify-between items-center">
           <div className="comment">
             <button
-              className="btn text-white"
+              className="btn bg-black-4 text-white-5"
               onClick={() => {
                 if (document) {
                   (
@@ -45,9 +44,9 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
             </button>
           </div>
           <div className="upvote">
-            <button className="btn text-white">
+            <button className="btn bg-black-4 text-white-5">
               <Triangle />
-              <span className="text-white">{item.reportUpvote}</span>
+              <span className="">{item.reportUpvote}</span>
               <Loading />
             </button>
           </div>
@@ -67,6 +66,7 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
             Comment On this Report
           </h3>
           <div className="divider divider-accent divider-end" />
+          
 
           <div className="comment-container">
             {dummyComment.map((comment, index) => (
