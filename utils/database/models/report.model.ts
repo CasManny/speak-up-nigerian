@@ -6,6 +6,10 @@ const reportSchema = new Schema({
     ref: 'User',
     required: true,
   },
+  state: {
+    type: String,
+    required: true
+  },
   issueType: {
     type: String,
     enum: ['infrastructure', 'education', 'unemployment', 'security', 'governance', 'transportation', 'social-issues', 'economic-issues'],
