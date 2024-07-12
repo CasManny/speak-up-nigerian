@@ -74,6 +74,10 @@ export const navigationLinks = [
         href: "/complains"
     },
     {
+        label: "Report Issue",
+        href: "/report-issues"
+    },
+    {
         label: "Dashboard",
         href: "/dashboard"
     }

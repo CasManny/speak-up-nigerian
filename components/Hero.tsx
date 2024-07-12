@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -13,7 +14,9 @@ const Hero = () => {
           in making a difference. <br /> Report issues, share solutions, and{" "}
           <span className="text-green-1">hold leaders accountable.</span>{" "}
         </p>
-        <Button className="bg-green-1 mt-5 w-fit">Submit a Report</Button>
+        <Link href={'/report-issues'}>
+          <Button className="bg-green-1 mt-5 w-fit">Submit a Report</Button>
+        </Link>
       </div>
       <div className="">
         <div className="mx-auto">

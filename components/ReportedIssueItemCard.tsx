@@ -59,10 +59,10 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              <X className="text-white" />
+              <X />
             </button>
           </form>
-          <h3 className="font-bold text-lg text-white">
+          <h3 className="font-bold text-lg">
             Comment On this Report
           </h3>
           <div className="divider divider-accent divider-end" />
@@ -77,8 +77,8 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
                   </div>
                 </div>
                 <div className="">
-                  <span className="text-white-5">{comment.fullName}</span>
-                  <p>{comment.comment}</p>
+                  <span className="font-semibold">{comment.fullName}</span>
+                  <p className="text-sm">{comment.comment}</p>
                 </div>
               </div>
             ))}
