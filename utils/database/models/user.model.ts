@@ -56,11 +56,10 @@ const userSchema = new Schema(
         ref: "Report",
       },
     ],
-
-    lastLogin: {
-      type: Date,
-      default: Date.now,
-    },
+    onboarded: {
+      type: Boolean,
+      default: false
+    }
   },
   { timestamps: true }
 );
