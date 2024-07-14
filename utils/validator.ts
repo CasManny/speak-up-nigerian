@@ -6,6 +6,7 @@ export const formSchema = z.object({
     roleInCountry: z.string({required_error: "Role must be filled"}),
     profilePicture: z.string(),
     dateOfBirth: z.date({required_error: 'Date of birth must be provided'}),
-    gender: z.string()
+    gender: z.string(),
+    lga: z.string({required_error: 'Local government area must be filled'})
 
 })

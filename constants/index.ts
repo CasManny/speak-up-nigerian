@@ -1,5 +1,4 @@
 export const nigeriaStates = [
-  "Search complains by state",
   "Abia",
   "Adamawa",
   "Akwa Ibom",
@@ -105,49 +104,49 @@ export const howItWorks = [
 export const reportIssuesOn = [
   {
     title: "Infrastructure",
-    href: "/report-issues/infrastructure",
+    href: "/report-issues",
     picture: "/infrastructure-bridge.jpg",
     text: "Report issues related to public infrastructure such as roads, bridges, water supply, electricity, and public transportation.",
   },
   {
     title: "Education",
-    href: "/report-issues/education",
+    href: "/report-issues",
     picture: "/education-books.jpg",
     text: "Notify about concerns regarding school facilities, teaching materials, teacher shortages, and access to education",
   },
   {
     title: "Unemployment",
-    href: "/report-issues/unemployment",
+    href: "/report-issues",
     picture: "/employment.jpg",
     text: "Highlight challenges such as job shortages, inequitable hiring practices, and barriers to entrepreneurship.",
   },
   {
     title: "Security",
-    href: "/report-issues/security",
+    href: "/report-issues",
     picture: "/security-camera.jpg",
     text: "Raise awareness on matters like crime rates, vandalism, public safety risks, and law enforcement issues",
   },
   {
     title: "Governance",
-    href: "/report-issues/governance",
+    href: "/report-issues",
     picture: "/governance-rule-of-law.jpg",
     text: "Report problems including corruption, transparency deficits, bureaucratic inefficiencies, and local governance shortcomings",
   },
   {
     title: "Transportation",
-    href: "/report-issues/transportation",
+    href: "/report-issues",
     picture: "/transportation-cars.jpg",
     text: "Identify problems such as traffic congestion, delays in public transit, pedestrian safety hazards, and accessibility issues in transport.",
   },
   {
     title: "Social Issues",
-    href: "/report-issues/social-issues",
+    href: "/report-issues",
     picture: "/social-issues-inequalities.jpg",
     text: "Bring attention to issues such as homelessness, substance abuse, domestic violence, discrimination, and access to social services",
   },
   {
     title: "Economic Issues",
-    href: "/report-issues/economic-issues",
+    href: "/report-issues",
     picture: "/people-holding-banner-seeking-support.jpg",
     text: "Flag concerns such as poverty levels, economic disparities, job availability, cost of living challenges, and financial access issues",
   },

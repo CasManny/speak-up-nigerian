@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Loading from "@/components/Loading";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { reportIssuesOn } from "@/constants";
@@ -20,7 +21,10 @@ const ReportIssueHomepage = () => {
           </select>
           <Textarea className="resize-none h-96 w-full rounded-md" />
 
-          <Button className="bg-green-2 w-full my-2">Submit Report</Button>
+          <Button className="bg-green-2 w-full my-2">
+            <Loading />
+            Submit Report
+          </Button>
         </form>
       </div>
     </div>
