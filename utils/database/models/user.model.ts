@@ -7,8 +7,12 @@ const userSchema = new Schema(
     },
     fullName: {
       type: String,
-      required: true,
       trim: true,
+    },
+    username: {
+      type: String,
+      required: true,
+      unique: true,
     },
     email: {
       type: String,
@@ -17,14 +21,8 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true,
     },
-    phoneNumber: {
-      type: String,
-    },
+   
     state: {
-      type: String,
-      required: true,
-    },
-    lga: {
       type: String,
     },
     userRole: {
@@ -42,8 +40,7 @@ const userSchema = new Schema(
     },
     gender: {
       type: String,
-      enum: ["male", "female", "other"],
-      default: "other",
+      enum: ["Male", "Female"],
     },
     accountStatus: {
       type: String,

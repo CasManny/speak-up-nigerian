@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import '../globals.css'
 
 const monsetserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${monsetserrat.className} bg-white-3`}>
-          <main className="min-h-screen flex items-center justify-center w-full">
+          <main className="min-h-screen">
             {children}
           </main>
         </body>

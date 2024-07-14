@@ -9,3 +9,13 @@ export interface IReportedIssue {
   reportNumberOfComment: number;
   reportUpvote: number;
 }
+
+export interface IUserData {
+  user: {
+    clerkId: string;
+    username: string;
+    email: string;
+    image_url: string;
+  }
+
+}
