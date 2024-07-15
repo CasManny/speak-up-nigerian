@@ -3,16 +3,25 @@ import mongoose, { Schema } from "mongoose";
 const reportSchema = new Schema({
   whoCreatedTheReportId: {
     type: Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
     required: true,
   },
   state: {
     type: String,
-    required: true
+    required: true,
   },
   issueType: {
     type: String,
-    enum: ['infrastructure', 'education', 'unemployment', 'security', 'governance', 'transportation', 'social-issues', 'economic-issues'],
+    enum: [
+      "infrastructure",
+      "education",
+      "unemployment",
+      "security",
+      "governance",
+      "transportation",
+      "social-issues",
+      "economic-issues",
+    ],
     required: true,
   },
   reportedComplain: {
@@ -21,37 +30,36 @@ const reportSchema = new Schema({
   },
   status: {
     type: String,
-    enum: ['submitted', 'in progress', 'resolved', 'closed'],
-    default: 'submitted',
+    enum: ["submitted", "in progress", "resolved", "closed"],
+    default: "submitted",
   },
-  photos: [{
-    type: String,
-  }],
-  dateSubmitted: {
-    type: Date,
-    default: Date.now,
-  },
-  lastUpdated: {
-    type: Date,
-    default: Date.now,
-    },
-    upvote: [{
-        type: Schema.Types.ObjectId,
-        ref: "User"
-  }],
-  commentsOnReports: [{
-    commentorId: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
-    comment: {
+  photos: [
+    {
       type: String,
     },
-    date: {
-      type: Date,
-      default: Date.now,
+  ],
+  upvote: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "User",
     },
-  }],
+  ],
+  commentsOnReports: [
+    {
+      commentorId: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+      comment: {
+        type: String,
+      },
+      date: {
+        type: Date,
+        default: Date.now,
+      },
+    },
+  ],
 });
 
-export const Report = mongoose.models.Report || mongoose.model("Report", reportSchema)
+export const Report =
+  mongoose.models.Report || mongoose.model("Report", reportSchema);

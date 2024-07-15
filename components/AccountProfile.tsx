@@ -36,8 +36,15 @@ import React, { ChangeEvent, useState } from "react";
 import { formSchema } from "@/utils/validator";
 import { gender, nigeriaStates, roleInCountry } from "@/constants";
 import Loading from "./Loading";
+import { updateUser } from "@/utils/database/actions/user.action";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const AccountProfile = ({ user }: IUserData) => {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter()
+
+ 
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -46,7 +53,6 @@ const AccountProfile = ({ user }: IUserData) => {
       fullname: "",
       state: "",
       roleInCountry: "",
-      profilePicture: user?.image_url ? user?.image_url : "",
       dateOfBirth: "",
       gender: "",
       lga: "",
@@ -54,10 +60,29 @@ const AccountProfile = ({ user }: IUserData) => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      if (!values.dateOfBirth || !values.fullname || !values.gender || !values.lga || !values.roleInCountry || !values.state) {
+        return toast.error("All field must be complete!")
+      }
+      setLoading(true);
+      await updateUser({
+        clerkId: user.clerkId,
+        profilePicture: user.image_url,
+        fullName: values.fullname,
+        state: values.state,
+        lga: values.lga,
+        gender: values.gender,
+        dateOfBirth: values.dateOfBirth,
+        userRole: values.roleInCountry,
+        onboarded: true,
+      });
+      setLoading(false)
+      toast.success('Onboarding completed successfully!')
+      router.push("/complains")
+    } catch (error: any) {
+      toast.error(error.message)
+    }
   }
   return (
     <Form {...form}>
@@ -141,7 +166,7 @@ const AccountProfile = ({ user }: IUserData) => {
               </FormItem>
             )}
           />
-           <FormField
+          <FormField
             control={form.control}
             name="lga"
             render={({ field }) => (
@@ -219,7 +244,7 @@ const AccountProfile = ({ user }: IUserData) => {
                       toYear={2024}
                       captionLayout="dropdown"
                       mode="single"
-                      //   selected={field.value}
+                      //   selected={field.value}`
                       onSelect={field.onChange}
                       disabled={(date) =>
                         date > new Date() || date < new Date("1900-01-01")
@@ -234,8 +259,7 @@ const AccountProfile = ({ user }: IUserData) => {
           />
         </div>
         <Button type="submit" className="bg-green-2">
-          <Loading />
-          Submit
+          {loading ? <Loading /> : "Submit"}
         </Button>
       </form>
     </Form>

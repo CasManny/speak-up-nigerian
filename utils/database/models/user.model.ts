@@ -1,5 +1,5 @@
-import mongoose, { Schema } from "mongoose";
-const userSchema = new Schema(
+import mongoose from "mongoose";
+const userSchema = new mongoose.Schema(
   {
     clerkId: {
       type: String,
@@ -23,6 +23,9 @@ const userSchema = new Schema(
     },
    
     state: {
+      type: String,
+    },
+    lga: {
       type: String,
     },
     userRole: {
@@ -49,7 +52,7 @@ const userSchema = new Schema(
     },
     reportedComplains: [
       {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Report",
       },
     ],
@@ -61,4 +64,4 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-export const User = mongoose.models.User || mongoose.model("User", userSchema);
+export const User = mongoose.models.User ||  mongoose.model("User", userSchema)

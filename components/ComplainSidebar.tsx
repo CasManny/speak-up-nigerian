@@ -3,9 +3,10 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { currentUser } from "@clerk/nextjs/server";
 
-
-const ComplainSidebar = () => {
+const ComplainSidebar = async () => {
+  const user = await currentUser();
   return (
     <>
       <div className="p-10 overflow-hidden sticky w-auto left-0 top-16 z-20  h-screen mr-10 flex-col hidden md:flex overflow-y-auto ">
@@ -31,16 +32,16 @@ const ComplainSidebar = () => {
             </div>
           ))}
         </div>
-        <div className="items-center justify-between gap-2 mt-auto hidden md:flex">
-          {createUser.map((link, index) => (
-            <Link href={link.href} key={index}>
-              <Button className="bg-green-2">{link.label}</Button>
-            </Link>
-          ))}
-        </div>
+        {!user && (
+          <div className="items-center justify-between gap-2 mt-auto hidden md:flex">
+            {createUser.map((link, index) => (
+              <Link href={link.href} key={index}>
+                <Button className="bg-green-2">{link.label}</Button>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
-      {/* // MOBILE NAVIGATION */}
-     
     </>
   );
 };

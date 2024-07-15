@@ -16,11 +16,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
-import { SignedIn, UserButton } from "@clerk/nextjs";
+import { SignedIn, useAuth, UserButton } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const path = usePathname();
+  const { userId } = useAuth()
   return (
     <div className=" w-full p-8 sticky top-0 left-0 bg-background z-50">
       <nav className="flex justify-between items-center">
@@ -104,6 +106,7 @@ const Header = () => {
                         <p className="text-black-4 text-2xl">{link.label}</p>
                       </Link>
                     ))}
+                    {!userId && (
                     <div className="flex flex-col gap-2 mt-10">
                       {createUser.map((item, index) => (
                         <Link href={item.href} key={index}>
@@ -111,17 +114,19 @@ const Header = () => {
                         </Link>
                       ))}
                     </div>
+
+                    )}
                   </ul>
                 </div>
               )}
-              {path === "/" && (
-                <div className="flex flex-col gap-2 mt-10">
-                  {createUser.map((item, index) => (
-                    <Link href={item.href} key={index}>
-                      <Button className="bg-green-2">{item.label}</Button>
-                    </Link>
-                  ))}
-                </div>
+              {path === "/" && !userId && (
+                  <div className="flex flex-col gap-2 mt-10">
+                    {createUser.map((item, index) => (
+                      <Link href={item.href} key={index}>
+                        <Button className="bg-green-2">{item.label}</Button>
+                      </Link>
+                    ))}
+                  </div>
               )}
             </SheetContent>
           </Sheet>

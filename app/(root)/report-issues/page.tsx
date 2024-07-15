@@ -3,9 +3,15 @@ import Loading from "@/components/Loading";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { reportIssuesOn } from "@/constants";
+import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 import React from "react";
 
-const ReportIssueHomepage = () => {
+const ReportIssueHomepage = async () => {
+  const user = await currentUser()
+  if (!user) {
+    redirect("/sign-in")
+  }
   return (
     <div className="h-screen text-black-4">
       <Header />

@@ -30,7 +30,7 @@ const OnboardingHomepage = async () => {
 
   
   return (
-    <main className="mx-auto flex flex-col max-w-3xl px-10 py-5">
+    <main className="mx-auto flex flex-col max-w-3xl px-10 py-20">
       <h1 className="font-bold text-2xl">Onboarding</h1>
       <p className="mt-2">
         Complete your profile now to use{" "}

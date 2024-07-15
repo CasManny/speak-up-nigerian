@@ -19,3 +19,30 @@ export interface IUserData {
   }
 
 }
+
+
+export interface ICreateUser {
+  id: string;
+  username: string;
+  email: string;
+  image_url: string;
+}
+
+export interface IUpdateUser {
+  clerkId: string;
+  fullName: string;
+  state: string;
+  userRole: string;
+  lga: string;
+  gender: string;
+  dateOfBirth: string;
+  onboarded: boolean;
+  profilePicture: string;
+}
+
+export interface ICreateReport {
+  userId: string;
+  state: string;
+  issueType: string;
+  reportedComplain: string;
+}
