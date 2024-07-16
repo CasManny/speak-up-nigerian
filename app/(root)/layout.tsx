@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "../globals.css";
@@ -13,22 +12,21 @@ export const metadata: Metadata = {
     "We invite you to join us in our mission to improve communities across Nigeria. Whether you are a concerned citizen, a government official, or a member of an organization, your participation is vital to our success. Report an issue, provide feedback, or become a volunteer—every action counts.",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-      <ClerkProvider>
-        <html lang="en">
-          <body className={`${monsetserrat.className} bg-white-3`}>
-            {children}
-            <div>
-              <Toaster />
-            </div>
-          </body>
-        </html>
-      </ClerkProvider>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${monsetserrat.className} bg-white-3`}>
+          {children}
+          <div>
+            <Toaster />
+          </div>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

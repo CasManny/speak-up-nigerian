@@ -6,10 +6,6 @@ const reportSchema = new Schema({
     ref: "User",
     required: true,
   },
-  state: {
-    type: String,
-    required: true,
-  },
   issueType: {
     type: String,
     enum: [
@@ -59,7 +55,7 @@ const reportSchema = new Schema({
       },
     },
   ],
-});
+}, { timestamps: true});
 
 export const Report =
   mongoose.models.Report || mongoose.model("Report", reportSchema);

@@ -1,17 +1,23 @@
 import Header from "@/components/Header";
 import Loading from "@/components/Loading";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { reportIssuesOn } from "@/constants";
+import ReportForm from "@/components/ReportForm";
+import { getUserByClerkId } from "@/utils/database/actions/user.action";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import React from "react";
 
 const ReportIssueHomepage = async () => {
   const user = await currentUser()
+  const userInfo = await getUserByClerkId({clerkId: user?.id})
   if (!user) {
-    redirect("/sign-in")
+    redirect('/sign-in')
   }
+
+  const userData = {
+    userId: userInfo?._id,
+    state: userInfo?.state
+  }
+
   return (
     <div className="h-screen text-black-4">
       <Header />
@@ -19,19 +25,7 @@ const ReportIssueHomepage = async () => {
         <h2 className="antialiased font-semibold">
           Report issue happening in your state
         </h2>
-        <form className="w-full">
-          <select className="select select-bordered w-full bg-white my-2 mx-auto">
-            {reportIssuesOn.map((state, index) => (
-              <option key={index}>{state.title}</option>
-            ))}
-          </select>
-          <Textarea className="resize-none h-96 w-full rounded-md" />
-
-          <Button className="bg-green-2 w-full my-2">
-            <Loading />
-            Submit Report
-          </Button>
-        </form>
+       <ReportForm user={userData} />
       </div>
     </div>
   );

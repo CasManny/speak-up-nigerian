@@ -38,7 +38,7 @@ export const getUserByClerkId = async ({clerkId}: {clerkId: string}) => {
 export const updateUser = async ({clerkId, fullName, state, userRole, lga, gender, dateOfBirth, onboarded, profilePicture }:IUpdateUser) => {
     try {
         await connectToDatabase()
-        const user = await User.updateOne({ clerkId: clerkId }, { fullName, state, userRole, lga, gender, dateOfBirth, onboarded, profilePicture })
+        const user = await User.findOneAndUpdate({ clerkId: clerkId }, { fullName, state, userRole, lga, gender, dateOfBirth, onboarded, profilePicture })
     } catch (error: any) {
         throw new Error(error.message)
     }

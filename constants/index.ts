@@ -139,13 +139,13 @@ export const reportIssuesOn = [
     text: "Identify problems such as traffic congestion, delays in public transit, pedestrian safety hazards, and accessibility issues in transport.",
   },
   {
-    title: "Social Issues",
+    title: "Social-Issues",
     href: "/report-issues",
     picture: "/social-issues-inequalities.jpg",
     text: "Bring attention to issues such as homelessness, substance abuse, domestic violence, discrimination, and access to social services",
   },
   {
-    title: "Economic Issues",
+    title: "Economic-Issues",
     href: "/report-issues",
     picture: "/people-holding-banner-seeking-support.jpg",
     text: "Flag concerns such as poverty levels, economic disparities, job availability, cost of living challenges, and financial access issues",

@@ -61,10 +61,10 @@ const AccountProfile = ({ user }: IUserData) => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!values.dateOfBirth || !values.fullname || !values.gender || !values.lga || !values.roleInCountry || !values.state) {
+      return toast.error("All field must be complete!")
+    }
     try {
-      if (!values.dateOfBirth || !values.fullname || !values.gender || !values.lga || !values.roleInCountry || !values.state) {
-        return toast.error("All field must be complete!")
-      }
       setLoading(true);
       await updateUser({
         clerkId: user.clerkId,
@@ -72,9 +72,9 @@ const AccountProfile = ({ user }: IUserData) => {
         fullName: values.fullname,
         state: values.state,
         lga: values.lga,
-        gender: values.gender,
+        gender: values.gender.toLowerCase(),
         dateOfBirth: values.dateOfBirth,
-        userRole: values.roleInCountry,
+        userRole: values.roleInCountry.toLowerCase(),
         onboarded: true,
       });
       setLoading(false)

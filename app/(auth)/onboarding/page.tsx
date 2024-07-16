@@ -24,6 +24,13 @@ const OnboardingHomepage = async () => {
       image_url: user?.imageUrl!,
     }
   }
+
+  userData = {
+    clerkId: user?.id!,
+    username: user?.username!,
+    email: user?.emailAddresses[0].emailAddress!,
+    image_url: user?.imageUrl!,
+  }
   if (verifyUser?.onboarded!) {
     redirect("/")
   }
