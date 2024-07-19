@@ -1,14 +1,16 @@
 import AccountProfile from "@/components/AccountProfile";
 import { createUser, getUserByClerkId } from "@/utils/database/actions/user.action";
 import { currentUser } from "@clerk/nextjs/server";
+import { User2 } from "lucide-react";
 import { redirect } from "next/navigation";
 import React from "react";
+
 
 const OnboardingHomepage = async () => {
   const user = await currentUser();
   let userData = {}
 
-  const verifyUser = await getUserByClerkId({clerkId: user?.id!.toString()})
+  const verifyUser = await getUserByClerkId({clerkId: user?.id!})
   if (!verifyUser) {
     const newUser = await createUser({
       id: user?.id!,
@@ -25,7 +27,7 @@ const OnboardingHomepage = async () => {
     }
   }
 
-  userData = {
+  userData  = {
     clerkId: user?.id!,
     username: user?.username!,
     email: user?.emailAddresses[0].emailAddress!,

@@ -31,7 +31,6 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 
-import { IUserData } from "@/types";
 import React, { ChangeEvent, useState } from "react";
 import { formSchema } from "@/utils/validator";
 import { gender, nigeriaStates, roleInCountry } from "@/constants";
@@ -39,8 +38,15 @@ import Loading from "./Loading";
 import { updateUser } from "@/utils/database/actions/user.action";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+interface Iuser {
+    clerkId: string;
+    username: string;
+    email: string;
+    image_url: string;
 
-const AccountProfile = ({ user }: IUserData) => {
+}
+
+const AccountProfile = ({user}: { user: Iuser}) => {
   const [loading, setLoading] = useState(false);
   const router = useRouter()
 

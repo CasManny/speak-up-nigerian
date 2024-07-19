@@ -25,7 +25,7 @@ export const createUser = async ({id, username, email, image_url}:ICreateUser) =
     }
 }
 
-export const getUserByClerkId = async ({clerkId}: {clerkId: string}) => {
+export const getUserByClerkId = async ({clerkId}: { clerkId: string}) => {
     try {
         await connectToDatabase()
         const user = await User.findOne({ clerkId: clerkId })
