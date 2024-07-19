@@ -12,7 +12,7 @@ const ReportedIssue = ({ item }: { item: IReport }) => {
     <div className="card bg-white-4 w-96 shadow-xl mx-auto">
       <div className="header-container flex items-center gap-3 p-2">
         <div className="avatar">
-          <div className="w-16 rounded-xl">
+          <div className="w-16 rounded-full">
             <img src={item.whoCreatedTheReportId.profilePicture} alt="profile picuture" />
           </div>
         </div>
