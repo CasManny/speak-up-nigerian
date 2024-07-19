@@ -22,7 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
         <html lang="en">
           <body className={`${monsetserrat.className} bg-white-3`}>
-          <main className="min-h-screen">{children}</main>
+          <main className="h-[100vh] flex items-center justify-center">{children}</main>
           <div>
               <Toaster />
             </div>

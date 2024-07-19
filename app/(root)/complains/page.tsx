@@ -3,7 +3,8 @@ import ComplainSidebar from '@/components/ComplainSidebar'
 import Header from '@/components/Header'
 import React from 'react'
 
-const ComplainsHomepage = () => {
+const ComplainsHomepage = async () => {
+
   return (
     <>
     <Header />

@@ -21,7 +21,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${monsetserrat.className} bg-white-3`}>
-          {children}
+            {children}
           <div>
             <Toaster />
           </div>

@@ -1,5 +1,5 @@
 "use client";
-import { IReportedIssue } from "@/types";
+import { IReport } from "@/types";
 import { MessageCircle, Triangle, X } from "lucide-react";
 import React from "react";
 import { Button } from "./ui/button";
@@ -7,25 +7,25 @@ import { dummyComment } from "@/constants";
 import { Textarea } from "./ui/textarea";
 import Loading from "./Loading";
 
-const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
+const ReportedIssue = ({ item }: { item: IReport }) => {
   return (
     <div className="card bg-white-4 w-96 shadow-xl mx-auto">
       <div className="header-container flex items-center gap-3 p-2">
         <div className="avatar">
           <div className="w-16 rounded-xl">
-            <img src={item.profileImage} alt="profile picuture" />
+            <img src={item.whoCreatedTheReportId.profilePicture} alt="profile picuture" />
           </div>
         </div>
         <div className="header-name">
-          <h2 className="font-bold">{item.fullName}</h2>
-          <span className="badge badge-outline">{item.state}</span>
-          <small className="text-base ml-2">{item.dateOfPosting}</small>
+          <h2 className="font-bold">{item.whoCreatedTheReportId.fullName}</h2>
+          <span className="badge badge-outline">{item.whoCreatedTheReportId.state}</span>
+          <small className="text-base ml-2">{'date'}</small>
         </div>
       </div>
 
       <div className="card-body">
-        <div className="badge badge-outline">{item.issue}</div>
-        <p className="text-normal text-black-1">{item.reportDesc}</p>
+        <div className="badge badge-outline">{item.issueType}</div>
+        <p className="text-normal text-black-1">{item.reportedComplain}</p>
 
         <div className="card-actions justify-between items-center">
           <div className="comment">
@@ -40,13 +40,13 @@ const ReportedIssue = ({ item }: { item: IReportedIssue }) => {
               }}
             >
               <MessageCircle />
-              <span>{item.reportNumberOfComment}</span>
+              <span>{item.commentsOnReports.length}</span>
             </button>
           </div>
           <div className="upvote">
             <button className="btn bg-black-4 text-white-5">
               <Triangle />
-              <span className="">{item.reportUpvote}</span>
+              <span className="">{item.upvote.length}</span>
               <Loading />
             </button>
           </div>

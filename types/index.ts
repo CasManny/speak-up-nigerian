@@ -1,14 +1,4 @@
-export interface IReportedIssue {
-  profileImage: string;
-  fullName: string;
-  dateOfPosting: string;
-  issue: string;
-  reportImage: string;
-  state: string;
-  reportDesc: string;
-  reportNumberOfComment: number;
-  reportUpvote: number;
-}
+
 
 export interface IUserData {
   user: {
@@ -45,4 +35,27 @@ export interface ICreateReport {
   state: string;
   issueType: string;
   reportedComplain: string;
+}
+
+interface User {
+  _id: string;
+  userRole: string;
+  profilePicture: string;
+  fullName: string;
+  lga: string;
+  state: string;
+}
+
+// Define the structure of a Report
+export interface IReport {
+  _id: string;
+  whoCreatedTheReportId: User;
+  issueType: string;
+  reportedComplain: string;
+  status: string;
+  photos: string[];
+  upvote: string[];
+  commentsOnReports: string[];
+  createdAt: Date;
+  updatedAt: Date;
 }

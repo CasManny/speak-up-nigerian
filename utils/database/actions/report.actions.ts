@@ -28,3 +28,36 @@ export const createReport = async ({userId, state, issueType, reportedComplain}:
      throw new Error(error.message)   
     }
 }
+
+export const getAllReports = async () => {
+    try {
+        await connectToDatabase()
+
+        const reports = await Report.find().select("-__v").sort({createdAt: "desc"}).populate({
+            path: "whoCreatedTheReportId",
+            select: "fullName state lga userRole profilePicture"
+        })
+
+        return reports.map((report) => ({
+            _id: report._id.toString(),
+            whoCreatedTheReportId: {
+              _id: report.whoCreatedTheReportId._id.toString(),
+              userRole: report.whoCreatedTheReportId.userRole,
+              profilePicture: report.whoCreatedTheReportId.profilePicture,
+              fullName: report.whoCreatedTheReportId.fullName,
+              lga: report.whoCreatedTheReportId.lga,
+              state: report.whoCreatedTheReportId.state,
+            },
+            issueType: report.issueType,
+            reportedComplain: report.reportedComplain,
+            status: report.status,
+            photos: report.photos,
+            upvote: report.upvote,
+            commentsOnReports: report.commentsOnReports,
+            createdAt: report.createdAt,
+            updatedAt: report.updatedAt,
+        }))
+    } catch (error: any) {
+     throw new Error(error.message)   
+    }
+}
